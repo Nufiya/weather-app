@@ -46,16 +46,14 @@ function App() {
           placeholder="Enter Location"
           type="text"
         />
-           <div className="unit-toggle">
-                    <label className="switch">
-                      <input type="checkbox" />
-                      <span className="slider round"></span>
-                    </label>
-                    <span className="unit-label">°C / °F</span>
-           </div>
+        <div className="unit-toggle">
+          <label className="switch">
+            <input type="checkbox" onChange={toggleUnit} />
+            <span className="slider round"></span>
+          </label>
+          <span className="unit-label">°C / °F</span>
+        </div>
       </div>
-    
-
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {loading && <p>Loading...</p>}
@@ -97,5 +95,3 @@ function App() {
 }
 
 export default App;
-
-
